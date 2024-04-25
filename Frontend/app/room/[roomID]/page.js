@@ -1,9 +1,7 @@
 "use client"
-import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
+import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt'; //zegocloud 
 
 function randomID(len) {
     let result = '';
@@ -48,7 +46,7 @@ export default function App() {
                 },
             ],
             scenario: {
-                mode: ZegoUIKitPrebuilt.OneONoneCall, 
+                mode: ZegoUIKitPrebuilt.OneONoneCall, //For one on one Video Call
             },
         });
     };

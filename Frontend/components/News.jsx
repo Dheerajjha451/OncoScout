@@ -9,10 +9,12 @@ const News = () => {
   const API_KEY = "cf47b5871b5e4e9cb925242fc564c991";
 
   useEffect(() => {
+     // Fetches news articles 
     const fetchNews = async () => {
       setLoading(true);
       try {
         const [brainTumorResponse, lungCancerResponse] = await Promise.all([
+          // API requests for brain tumor and lung cancer 
           axios.get(`https://newsapi.org/v2/everything?q="brain%20tumor"&apiKey=${API_KEY}&pageSize=12&page=${pageNumber}`),
           axios.get(`https://newsapi.org/v2/everything?q="lung%20cancer"&apiKey=${API_KEY}&pageSize=12&page=${pageNumber}`)
         ]);

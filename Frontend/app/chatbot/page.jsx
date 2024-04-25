@@ -1,10 +1,8 @@
 "use client"
 import Link from "next/link";
-import { useState } from "react";
 import Navbar from "../../components/Navbar"; 
 
-const VideoCall = () => {
-    const [roomID, setRoomID] = useState('');
+const Chatbot = () => {
 
     return (
         <div className="w-full">
@@ -18,7 +16,7 @@ const VideoCall = () => {
                
                 <Link href='/chat'>
                     <button className="px-8 py-2 rounded-lg bg-red-500 text-white mt-[1rem]">
-                        Ask Your Question Here
+                    Ask question with your chatbot assistant.
                     </button>
                 </Link>
             </div>
@@ -26,4 +24,4 @@ const VideoCall = () => {
     );
 };
 
-export default VideoCall;
+export default Chatbot;

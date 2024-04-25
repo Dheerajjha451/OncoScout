@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 
 export const authOptions = {
   providers: [
+    // Credentials provider for email and password login
     CredentialsProvider({
       name: "credentials",
       credentials: {},
@@ -14,7 +15,7 @@ export const authOptions = {
         const { email, password } = credentials;
 
         try {
-          await connectMongoDB();
+          await connectMongoDB(); // Connect to MongoDB database
           const user = await User.findOne({ email });
 
           if (!user) {
@@ -35,7 +36,7 @@ export const authOptions = {
     }),
   ],
   session: {
-    strategy: "jwt",
+    strategy: "jwt", // JWT for session management
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import axios from "axios";
 
+//predicted tumor descriptions
 const descriptions = {
   Glioma: "Glioma is a growth of cells that starts in the brain or spinal cord.\nThe cells in a glioma look similar to healthy brain cells called glial cells.\nGlial cells surround nerve cells and help them function.\nAs a glioma grows it forms a mass of cells called a tumor.\nThe tumor can grow to press on brain or spinal cord tissue and cause symptoms.\nSymptoms depend on which part of the brain or spinal cord is affected.\nCommon signs and symptoms of gliomas include:\n\nHeadache, particularly one that hurts the most in the morning.\nNausea and vomiting.\nConfusion or a decline in brain function, such as problems with thinking and understanding information.\nMemory loss.\nPersonality changes or irritability.\nVision problems, such as blurred vision, double vision or loss of peripheral vision.\nSpeech difficulties.",
   Meningioma: "A meningioma is a tumor that grows from the membranes that surround the brain and spinal cord, called the meninges.\nA meningioma is not a brain tumor, but it may press on the nearby brain, nerves and vessels.\nMeningioma is the most common type of tumor that forms in the head.\nMost meningiomas grow very slowly.\nThey can grow over many years without causing symptoms.\nBut sometimes, their effects on nearby brain tissue, nerves or vessels may cause serious disability.\nMeningiomas occur more often in women. They're often found at older ages.\nBut they can happen at any age.\nBecause most meningiomas grow slowly, often without symptoms, they do not always need treatment right away.\nInstead, they may be watched over time.\nSymptoms may include:\n\nChanges in vision, such as seeing double or blurring.\nHeadaches that are worse in the morning.\nHearing loss or ringing in the ears.\nMemory loss.\nLoss of smell.\nSeizures.\nWeakness in the arms or legs.\nTrouble speaking.",
@@ -37,6 +38,7 @@ export default function UserInfoWithImageUpload() {
     formData.append("file", file);
 
     try {
+      //prediction
       const response = await axios.post("http://localhost:5000/predict", formData);
 
       const data = response.data;
@@ -53,7 +55,7 @@ export default function UserInfoWithImageUpload() {
       console.error("Error uploading file: ", error);
     }
   };
-
+//upload new
   const handleNewReport = () => {
     window.location.reload();
   };
