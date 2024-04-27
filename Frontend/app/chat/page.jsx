@@ -16,11 +16,11 @@ const ChatBot = () => {
       window.botpressWebChat.init({
         "composerPlaceholder": "Chat with OncoSight",
         "botConversationDescription": "I will answer questions related to brain tumor and lung cancer.",
-        "botId": "5cd7908b-63d8-4a51-a18b-b148d85d8e19",
+        "botId": "5cd7908b-63d8-4a51-a18b-b148d85d8e",
         "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
         "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "5cd7908b-63d8-4a51-a18b-b148d85d8e19",
-        "webhookId": "11637ad8-8d46-41c7-ad99-d052b3425e0f",
+        "clientId": "5cd7908b-63d8-4a51-a18b-b148d85d8",
+        "webhookId": "11637ad8-8d46-41c7-ad99-d052b3425",
         "lazySocket": true,
         "themeName": "prism",
         "botName": "OncoSight",
@@ -28,7 +28,7 @@ const ChatBot = () => {
         "theme": "prism",
         "themeColor": "#2563eb"
       });
-    };
+    }; //add your botId, clientId, webhookId here
 
     return () => {
       const scriptElement = document.querySelector('script[src="https://cdn.botpress.cloud/webchat/v1/inject.js"]');

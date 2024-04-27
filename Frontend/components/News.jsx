@@ -6,7 +6,7 @@ const News = () => {
   const [news, setNews] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
-  const API_KEY = "cf47b5871b5e4e9cb925242fc564c991";
+  const API_KEY = " ";//api key
 
   useEffect(() => {
      // Fetches news articles 
